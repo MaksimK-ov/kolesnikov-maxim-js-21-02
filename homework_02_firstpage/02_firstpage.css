@@ -1,29 +1,120 @@
-#flex-box {
-width: 100%;
-height: 100%;
-background-color: #98FB98;
- }
-#header {
- border: 1px solid yellow;
- width: 100px;
- height: 100px;
- background: red;
- }
- #menu {
-  border: 1px solid yellow;
-  width: 100px;
-  height: 100px;
-  background: red;
-  }
-  #content {
-   border: 1px solid yellow;
-   width: 100px;
-   height: 100px;
-   background: red;
+.project {
+display: grid;
+             gap: 5px;
+             grid-template-rows: 70px 320px 320px 320px 35px;
+             grid-template-columns: repeat(9, 1fr);
+              grid-template-areas:
+              "header header header header header header header header header"
+              "sidebar content content content content content content content content"
+              "sidebar content content content content content content content content"
+              "sidebar content content content content content content content content"
+              "footer footer footer footer footer footer footer footer footer";
+
+}
+.header { display: flex;
+               justify-content: space-between;
+               align-item: center;
+               font-size: 32px;
+                background: #228B22;
+grid-area: header;
    }
-   #footer {
-    border: 1px solid yellow;
-    width: 100px;
-    height: 100px;
-    background: red;
-    }
+
+  .sidebar {
+  grid-area: sidebar;
+  font-size: 14px;
+    background: #32CD32;
+   }
+
+   .content {
+   display: grid;
+              grid-template-rows: repeat(1, 120px);
+              grid-template-columns: repeat(9, 100px);
+              grid-template-areas:
+              "head head head head head head head head head"
+              "block block block block block block block block block"
+              "population population population population population population population population population";
+   grid-area: content;
+     }
+
+     .head {
+     grid-area: head;
+     }
+.block { display: grid;
+ grid-template-rows: repeat(1, 90px);
+              grid-template-columns: repeat(6, 100px);
+              grid-template-areas:
+              "blockL blockL blockL blockR blockR blockR";
+              grid-column-gap: 10px;
+              grid-area: block;
+}
+      .blockL { grid-area: blockL;
+      font-size: 22px;
+      background: #808080;
+      }
+
+      .blockR { grid-area: blockR;
+      font-size: 22px;
+            background: #808080;
+             }
+
+      .population { grid-area: population;
+      }
+  .table {
+            display: grid;
+              grid-template-rows: repeat(2, 90px);
+              grid-template-columns: repeat(6, 90px);
+              grid-template-areas:
+              "tableP tableP tableS tableS tableSM tableSM"
+              "tableM tableM tableSL tableSL tableT tableT";
+              grid-row-gap: 10px;
+         }
+      .tableP {
+      grid-area: tableP;
+
+          }
+      .tableS { grid-area: tableS;
+
+          }
+      .tableSM { grid-area: tableSM;
+
+          }
+      .tableM { grid-area: tableM;
+
+          }
+      .tableSL { grid-area: tableSL;
+
+          }
+      .tableT { grid-area: tableT;
+         }
+
+     .footer{ display: inline-flex;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+     grid-area: footer;
+     background: #98FB98;
+     color: #000000;
+     }
+
+    .square {
+  height: 60px;
+  width: 60px;
+  background-color: #808080;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+.sidebar {
+display: none;
+}
+.table {
+display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     }
+.block {
+   display: flex;
+        justify-content: space-between;
+         flex-wrap: wrap;
+        width: 300px;
+        gap: 10px;
+     }
