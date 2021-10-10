@@ -1,0 +1,202 @@
+.project {
+display: grid;
+             gap: 5px;
+             grid-template-rows: 70px 320px 320px 320px 35px;
+             grid-template-columns: repeat(9, 1fr);
+              grid-template-areas:
+              "HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER"
+              "sidebar content content content content content content content content"
+              "sidebar content content content content content content content content"
+              "sidebar content content content content content content content content"
+              "footer footer footer footer footer footer footer footer footer";
+
+}
+.HEADER { display: inline-flex;
+             justify-content: space-between;
+             flex-wrap: nowrap;
+                        font-size: 32px;
+                         background: #228B22;
+                         grid-area: HEADER;
+                         justify-content: space-between;
+                         }
+.header { display: flex;
+               justify-content: space-between;
+               align-item: center;
+               font-size: 32px;
+                background: #228B22;
+grid-area: header;
+   }
+.loader { width: 40px;
+height: 40px;
+background-color: #ADFF2F;
+animation-name: loader;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+  .sidebar {
+  grid-area: sidebar;
+  font-size: 14px;
+    background: #32CD32;
+   }
+
+   .content {
+   display: grid;
+              grid-template-rows: repeat(1, 120px);
+              grid-template-columns: repeat(9, 100px);
+              grid-template-areas:
+              "head head head head head head head head head"
+              "block block block block block block block block block"
+              "population population population population population population population population population";
+   grid-area: content;
+     }
+
+     .head {
+     grid-area: head;
+     }
+.block { display: grid;
+ grid-template-rows: repeat(1, 90px);
+              grid-template-columns: repeat(6, 100px);
+              grid-template-areas:
+              "blockL blockL blockL blockR blockR blockR";
+              grid-column-gap: 10px;
+              grid-area: block;
+}
+      .blockL { grid-area: blockL;
+      font-size: 22px;
+      background: #808080;
+      }
+
+      .blockR { grid-area: blockR;
+      font-size: 22px;
+            background: #808080;
+             }
+
+      .population { grid-area: population;
+      }
+  .table {
+            display: grid;
+              grid-template-rows: repeat(2, 120px);
+              grid-template-columns: repeat(6, 120px);
+              grid-template-areas:
+              "tableP tableP tableS tableS tableSM tableSM"
+              "tableM tableM tableSL tableSL tableT tableT";
+              grid-row-gap: 10px;
+               grid-column-gap: 10px;
+
+         }
+      .tableP {
+      grid-area: tableP;
+      background-color: #D3D3D3;
+      display: flex;
+      transition: 0.5s linear;
+          }
+      .tableS { grid-area: tableS;
+      background-color: #D3D3D3;
+      display: flex;
+        transition: 0.5s linear;
+          }
+      .tableSM { grid-area: tableSM;
+      background-color: #D3D3D3;
+      display: flex;
+        transition: 0.5s linear;
+          }
+      .tableM { grid-area: tableM;
+      background-color: #D3D3D3;
+      display: flex;
+        transition: 0.5s linear;
+          }
+      .tableSL { grid-area: tableSL;
+      background-color: #D3D3D3;
+      display: flex;
+        transition: 0.5s linear;
+          }
+      .tableT { grid-area: tableT;
+      background-color: #D3D3D3;
+      display: flex;
+        transition: 0.5s linear;
+         }
+.P {
+margin-top: 20px;
+margin-left: 20px;
+}
+.S {
+margin-top: 20px;
+margin-left: 20px;
+}
+.SM {
+margin-top: 20px;
+margin-left: 20px;
+}
+.SL {
+margin-top: 20px;
+margin-left: 20px;
+}
+.M {
+margin-top: 20px;
+margin-left: 20px;
+}
+.T {
+margin-top: 20px;
+margin-left: 20px;
+}
+
+     .footer{ display: inline-flex;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+     grid-area: footer;
+     background: #98FB98;
+     color: #000000;
+     }
+
+    .square {
+  height: 80px;
+  width: 80px;
+  background-color: #808080;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+.sidebar {
+display: none;
+}
+.table {
+display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     }
+.block {
+   display: flex;
+        justify-content: space-between;
+         flex-wrap: wrap;
+        width: 300px;
+        gap: 10px;
+     }
+}
+
+.tableP:hover {
+   background: #2F4F4F;
+}
+.tableS:hover {
+   background: #2F4F4F;
+}
+.tableSM:hover {
+   background: #2F4F4F;
+}
+.tableSL:hover {
+   background: #2F4F4F;
+}
+.tableM:hover {
+   background: #2F4F4F;
+}
+.tableT:hover {
+   background: #2F4F4F;
+}
+@keyframes loader {
+       from {
+       transform: rotate(0deg);
+}
+       to {
+       transform: rotate(90deg);
+}
+}
