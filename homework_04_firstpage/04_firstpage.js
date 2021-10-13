@@ -1,30 +1,10 @@
-let firstStr = prompt ()
-let secondStr = prompt ()
+let thirdString = prompt()
+ let thirdRegExp = new RegExp('\\b[a-zA-z\\-]');
+ let regexp = /^[а-яА-я]+ [а-яА-я]+ [а-яА-я]+$/g;
 
-if(firstStr == secondStr) {
-alert('true')
-}
-else { alert('false')
-}
+ let firstString = 'Колесников Максим Александрович';
 
-
-function truncate(str, maxlength) {
-    if (str.length > maxlength) {
-        str = str.substring(0, maxlength);
-        return str + "...";
-    }
-    else
-    return str;
-}
-alert(truncate("Функция усекает строку до количества символов и добавляет многоточие.", 32));
-
-const secondRegExp = new RegExp('^\\d\\d[/]\\d\\d[/]\\d\\d\\d\\d \\d-\\d$');
-const regexp = /^\d\d[/]\d\d[/]\d\d\d\d \d\d-\d\d$/;
-
-const firstString = '12/02/2021 12-00';
-
-alert((firstString.replace('/', '.').replace('/', '.').replace('-', ':')));
-
+alert(regexp.test(firstString));
 
 
 
