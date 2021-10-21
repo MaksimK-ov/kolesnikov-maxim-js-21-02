@@ -36,3 +36,8 @@ function sum(secondObj) {
   return sum;
 }
 console.log(sum(secondObj));
+
+// Пятое задание
+const sr = [1, 3, 4, 5, 7, 5, 2, 9].reduce((a, b) => a + b, 0);
+const result = sr / [1, 3, 4, 5, 7, 5, 2, 9].length;
+console.log(result);
