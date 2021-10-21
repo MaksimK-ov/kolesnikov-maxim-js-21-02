@@ -13,3 +13,9 @@ return accumulator;
 }, []);
 console.log(thirdArr);
 console.log(reverseArr);
+
+// Третье задание
+const fourthArr = [['Год', '2021'], ['Век', 'XXI']];
+console.log(fourthArr);
+const obj = Object.fromEntries(fourthArr);
+console.log(obj);
