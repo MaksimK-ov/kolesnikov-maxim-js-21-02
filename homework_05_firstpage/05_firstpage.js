@@ -41,3 +41,32 @@ console.log(sum(secondObj));
 const sr = [1, 3, 4, 5, 7, 5, 2, 9].reduce((a, b) => a + b, 0);
 const result = sr / [1, 3, 4, 5, 7, 5, 2, 9].length;
 console.log(result);
+
+//Шестое задание
+function Calculator() {
+  this.read = function() {
+    this.a = +prompt('a', 0);
+    this.b = +prompt('b', 0);
+  };
+  this.sum = function() {
+    return this.a + this.b;
+  };
+  this.mul = function() {
+    return this.a * this.b;
+  };
+  this.sub = function() {
+      return this.a - this.b;
+    };
+  this.div = function() {
+        return this.a / this.b;
+      };
+}
+const calculator = new Calculator();
+calculator.read();
+console.log( "Sum=" + calculator.sum() );
+console.log( "Mul=" + calculator.mul() );
+console.log( "sub=" + calculator.sub() );
+console.log( "div=" + calculator.div() );
+
+
+
