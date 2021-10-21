@@ -68,5 +68,18 @@ console.log( "Mul=" + calculator.mul() );
 console.log( "sub=" + calculator.sub() );
 console.log( "div=" + calculator.div() );
 
+// Седьмое задание
+const fifthArr = [1, 2, 3, 'Первый', 'Второй', 'Третий', [4, 5, 6], [7, 8, 9]];
+console.log(fifthArr);
+const fifthObj = fifthArr.reduce((newObj, item) => {
+const numbers = 'Numbers'
+const strings = 'Strings'
+const objects = 'Objects'
+  newObj[numbers] = [1, 2, 3];
+  newObj[strings] = ['Первый', 'Второй', 'Третий'];
+  newObj[objects] = [[4, 5, 6], [7, 8, 9]];
+  return newObj;
+}, {});
+console.log(fifthObj);
 
 
