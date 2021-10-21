@@ -97,5 +97,12 @@ else return false;
 console.log(isAnagram('соль', 'лось'));
 console.log(isAnagram('собака', 'кот'));
 
+// Десятое задание
+const sixObj =  {
+  key: "value",
+  key2: "value2"
+ }
+console.log(sixObj.key + ', ' + sixObj.key2)
+
 
 
