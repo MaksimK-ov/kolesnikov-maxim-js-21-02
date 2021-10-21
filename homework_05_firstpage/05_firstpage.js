@@ -89,4 +89,13 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         console.log(array[i]);
     }
 
+// Девятое задание
+const isAnagram = (str1, str2) => {
+if (str1.toLowerCase().split('').filter(e => e != ' ').sort().join('') == str2.toLowerCase().split('').filter(e => e != ' ').sort().join('')) return true;
+else return false;
+}
+console.log(isAnagram('соль', 'лось'));
+console.log(isAnagram('собака', 'кот'));
+
+
 
