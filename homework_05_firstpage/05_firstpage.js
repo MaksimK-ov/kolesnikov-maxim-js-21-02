@@ -104,5 +104,28 @@ const sixObj =  {
  }
 console.log(sixObj.key + ', ' + sixObj.key2)
 
+// Одиннадцатое задание
+function User (name, phone) {
+Object.defineProperties(this, properties {
+name: {
+        value: name,
+        writable: true
+        configurable: true
+        enumerable: true
+},
+phone: {
+        value: phone,
+        writable: true
+        configurable: true
+        enumerable: true
+}
+}
+}
+const firstUser = new User(name: 'Ivan', phone: '88005553535')
+
+firstUser.name = 'Petr'
+firstUser.phone = '  '
+console.log(Object.gerOwnPropertiesDescriptors(firstUser))
+
 
 
