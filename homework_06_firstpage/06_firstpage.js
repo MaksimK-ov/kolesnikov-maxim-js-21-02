@@ -34,3 +34,21 @@ const memoizeFib = () => {
 const newFib = memoizeFib();
 console.log(Fib(40));
 console.log(newFib(41));
+
+// Третье задание
+const names = [["name", "Anna"], ["age", 22], ["pets", [["dog", "Faust"], ["cat", "Balthazar"]]]];
+function Object(arr) {
+    return arr.reduce((acc, curr) => {
+        if(typeof (curr[1])!='object') {
+        return {
+            ...acc,
+            [curr[0]]:curr[1]
+        }} else {
+             return {
+                 ...acc,
+                 [curr[0]]:Object(curr[1])
+             }
+        }
+    }, {})
+}
+console.log((Object(names)));
