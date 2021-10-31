@@ -48,3 +48,65 @@ cat.say()
 cat.hunt()
 dog.say()
 parrot.say()
+
+// Конструктор
+function Animal(pet)  {
+      this.pet = pet;
+      this.eat = function () {
+        console.log(`${this.pet} ест`)
+      },
+      this.say = function () {
+        console.log('Неизвестное животное молчит')
+      },
+      rename = function (newName) {
+      this.name = newName}
+}
+Object.defineProperties(Animal, {
+             "name": {enumerable: false, configurable: false, writable: false},
+             "eat": {enumerable: false, configurable: false, writable: false},
+             "say": {enumerable: false, configurable: false, writable: false}
+}
+);
+
+function Cat(pet, animal) {
+     Animal.call(this, pet)
+     this.animal = animal;
+     this.say = function () {console.log
+     (`${this.pet} говорит: Неправильно ты, дядя Федор, бутерброд ешь`)
+     }
+     this.hunt = function () {
+     console.log(`${this.pet} охотится`)
+     }
+}
+function Dog(pet, animal) {
+     Animal.call(this, pet)
+     this.animal = animal;
+     this.say = function () {
+     console.log(`${this.pet} говорит: Ну что? Возьмёте меня к себе жить?`)
+     }
+}
+function Parrot(pet, animal) {
+     Animal.call(this, pet)
+     this.animal = animal;
+     this.say = function () {
+     console.log(`${this.pet} говорит: Свободу попугаям!`)
+     }
+}
+
+const animal = new Animal('pet')
+const cat = new Cat('Мотроскин')
+const dog = new Dog('Шарик')
+const parrot = new Parrot('Кеша')
+const newCat = new Cat('Tom')
+const newDog = new Dog('Spike')
+const newParrot = new Parrot('Rio')
+animal.eat()
+animal.say()
+cat.say()
+cat.hunt()
+newCat.say()
+newCat.hunt()
+dog.say()
+newDog.say()
+parrot.say()
+newParrot.say()
