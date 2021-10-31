@@ -110,3 +110,73 @@ dog.say()
 newDog.say()
 parrot.say()
 newParrot.say()
+
+// Класс
+class Animal {
+  constructor(name) {
+  this.name = name
+  }
+  eat () {
+      console.log(`${this.name} ест`)
+  }
+  say () {
+      console.log(`Неизвестное животное молчит`)
+  }
+       rename (newName) {
+           this.name = newName
+       }
+}
+Object.defineProperties(Animal, {
+             "name": {enumerable: false, configurable: false, writable: false},
+             "eat": {enumerable: false, configurable: false, writable: false},
+             "say": {enumerable: false, configurable: false, writable: false}
+}
+);
+
+const animal = new Animal ('pet')
+animal.eat()
+animal.say()
+
+class Cat {
+  constructor(name) {
+  this.name = name
+  }
+  say () {
+      console.log(`${this.name} говорит: Неправильно ты, дядя Федор, бутерброд ешь`)
+  }
+  hunt () {
+        console.log(`${this.name} охотится`)
+    }
+}
+const cat = new Cat ('Мотроскин')
+const newCat =new Cat ('Tom')
+cat.say()
+newCat.say()
+cat.hunt()
+newCat.hunt()
+
+class Dog {
+  constructor(name) {
+  this.name = name
+  }
+  say () {
+      console.log(`${this.name} говорит: Ну что? Возьмёте меня к себе жить?`)
+  }
+}
+const dog = new Dog ('Шарик')
+const newDog = new Dog('Spike')
+dog.say()
+newDog.say()
+
+class Parrot {
+  constructor(name) {
+  this.name = name
+  }
+  say () {
+      console.log(`${this.name} говорит: Свободу попугаям!`)
+  }
+}
+const parrot = new Parrot ('Кеша')
+const newParrot = new Parrot ('Rio')
+parrot.say()
+newParrot.say()
