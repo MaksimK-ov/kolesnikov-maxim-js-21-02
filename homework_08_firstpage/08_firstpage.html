@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="08_firstpage.js"></script>
+    <title>Занятие №8</title>
+</head>
+<body>
+<table id="tab1" class="sortable">
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Номер телефона</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
+    <ul>
+        <li>
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" value="" size="12" tabindex="1" />
+        </li>
+        <li>
+            <label for="numbers">Номер телефона</label>
+            <input type="text" name="numbers" id="numbers" value="" size="12" tabindex="2" />
+        </li>
+        <li>
+            <label for="subm">Добавить</label>
+            <input type="submit" name="subm" class="submit" value="Добавить строку" tabindex="4" />
+        </li>
+        <li>
+            <label for="delete">Удалить</label>
+            <input type="button" name="del" class="delete" value="Удалить строку" tabindex="4" />
+        </li>
+    </ul>
+</form>
+<button type="button" onclick="oneFunction()">Красный/зеленый</button>
+<button type="button" onclick="twoFunction()">Синий/желтый</button>
+<button type="button" onclick="threeFunction()">Черный/белый</button>
+</body>
+</html>
