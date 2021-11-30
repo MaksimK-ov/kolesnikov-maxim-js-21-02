@@ -1,0 +1,60 @@
+.body {
+    background: #C0C0C0;
+    height: 850px;
+}
+.header {
+    background: #DCDCDC;
+    border-radius: 10px;
+    height: 10%;
+    margin-bottom: 145px;
+    display: grid;
+    grid-template-columns: 150px auto 300px 200px 150px auto ;
+    grid-template-areas:
+            "logo title users posts enter reg";
+    gap: 5px;
+}
+.logo {
+    padding-top: 10px;
+    padding-left: 50%;
+    grid-area: logo;
+}
+.title {
+    font-size: 15px;
+    grid-area: title;
+}
+.users {
+    font-size: 20px;
+    grid-area: users;
+    padding-left: 100px;
+}
+.posts {
+    font-size: 20px;
+    grid-area: posts;
+}
+.enter {
+    font-size: 20px;
+    grid-area: enter;
+    text-align: right;
+    padding-left: 200px;
+}
+.reg {
+    font-size: 20px;
+    grid-area: reg;
+    text-align: right;
+    padding-right: 100px;
+}
+.content {
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 50%;
+    width: 60%;
+    margin: 0 20% 0 20%;
+}
+.footer {
+    background: #DCDCDC;
+    bottom: 0;
+    border-radius: 10px;
+    height: 6%;
+    margin-top: 145px;
+}
